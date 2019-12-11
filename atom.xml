@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://shuwai.github.io/</id>
+    <title>Shuwai&apos;s blog</title>
+    <updated>2019-12-11T13:38:56.238Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://shuwai.github.io/"/>
+    <link rel="self" href="https://shuwai.github.io//atom.xml"/>
+    <logo>https://shuwai.github.io//images/avatar.png</logo>
+    <icon>https://shuwai.github.io//favicon.ico</icon>
+    <rights>All rights reserved 2019, Shuwai&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[免费获取专业绘图软件 OriginPro ]]></title>
+        <id>https://shuwai.github.io//post/free-origin-for-edu</id>
+        <link href="https://shuwai.github.io//post/free-origin-for-edu">
+        </link>
+        <updated>2019-12-11T12:09:47.000Z</updated>
+        <content type="html"><![CDATA[<p>开门见山，任意搜索引擎搜索&quot;Origin 中文论坛&quot;或 <a href="https://my.originlab.com/forum/forum.asp?FORUM_ID=28">链接直达</a></p>
+<blockquote>
+<p>OriginLab 为中国学生提供了免费半年正版中文 OriginPro，只要你是在校大学生，只要你有以 edu.cn/ac.cn 结尾的学校邮箱，你就能拥有它。</p>
+</blockquote>
+<p>如果你是在中国高校的学生，只需要如实填写申请表，系统很快就会发送一封调查问卷到你的 edu 邮箱。调查问卷是一些关于 Origin 的用户调查和功能建议，你可以趁此机会向官方提出你的需求和建议。(❗申请链接在国内环境打开可能比较慢，请走代理）</p>
+<p>按提示完成调查后，系统会发放包含激活码的第二封邮件到你的邮箱，邮件提供的链接下载速度并不快，你可根据实际速度是否选择论坛提供的百度云下载。</p>
+<p>Note:</p>
+<ol>
+<li>半年学习版 (OriginPro Learning Edition) 包含所有功能，与专业版的区别是每个工程文件只能建立 12 个窗口，这个数字已经能满足大部分学生的需求了。</li>
+<li>一般 Origin 每年发布 2~3 个版本，半年使用期过后需要下载新版本，重新申请新版本的 license.</li>
+<li>论坛里有很多别人踩过的坑和丰富的学习资源，Origin 作为主力绘图软件的画可时常关注。</li>
+</ol>
+<p>根据发帖时间，Origin 官方至少在 2016 年就开始为中国学生提供免费使用版了，而且是只为中国地区提供的。我不知道他们的用意何在，但从长达半年的试用期以及可以连续申请最新中文版的机制看，诚意绝对是满满的。</p>
+<p>Origin 作为一款老牌科研绘图软件，而在中国有着上千万的科研工作者因各种原因无法购买相关软件。该活动对他们来说无疑是十分有帮助的，并且也在中国大大推广了 Origin, 算得上 win-win 了。</p>
+<p>中文论坛里的工作人员相当活跃，你可以在不同的求助帖子看到相同的身影为用户解答各类问题。遗憾的是，活跃的仅仅是工作人员，用户之间互相帮助的情况并不多见。另外，我身边的不少同学都并不知道可以免费申请正版，依旧使用着印有大 C 的盗版，可见大家消息的不灵通以及并没有好好享受自己的学生优惠权益。</p>
+<p>这里推荐 <a href="https://github.com/wowlusitong/awesome-education">awesome-education</a> 和 <a href="https://github.com/ivmm/Student-resources">Student-resources</a> 两个项目，里面收集了许多学生优惠，希望大家除了一年四次的火车优惠外，能享受应有的优惠活动。同时希望大家在享受教育优惠的同时，不忘自己身为教育系统的一员，能多多回馈社区，输出自己的经验和知识。这也是我开始博客写作的原因之一：向大家介绍日常工作，同时巩固自身基础。</p>
+<p>PS:<br>
+尽管 Origin 是一个非常优秀的科研绘图软件，但我已弃坑，转向 Python 的 <a href="https://matplotlib.org/">matplotlib</a> 绘图库了。以后有机会会分享我用 matplotlib 的经验。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的第一篇博客文章]]></title>
+        <id>https://shuwai.github.io//post/first-blog</id>
+        <link href="https://shuwai.github.io//post/first-blog">
+        </link>
+        <updated>2019-12-11T02:49:55.000Z</updated>
+        <content type="html"><![CDATA[<p>很早以前就有建一个属于自己的博客的想法了，苦于拖延症，即使是在 <a href="https://wordpress.org/">WordPress</a>, <a href="https://hexo.io/zh-cn/docs/">Hexo</a> 等工具已相当成熟的 9102 年，也迟迟没有动手。现在，9102 年的最后一个月，小小树的博客终于开张了啦。</p>
+<p>这个博客借助 <a href="https://gridea.dev/">Gridea</a> 和 <a href="https://pages.github.com/">Github Pages</a> 搭建，如果你也有搭建个人博客的想法，但像我一样没有相关经验，Gridea 是一个不错的选择。你可以参考这个 <a href="https://gridea.dev/docs/">教程</a>, 仅需半小时，无需编程基础就能拥有自己的一片写作空间。</p>
+<p>最后，希望能坚持下来，认真写作，做到两天一更。😜</p>
+]]></content>
+    </entry>
+</feed>
