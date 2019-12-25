@@ -1461,3 +1461,24 @@ a.purple-link {
   margin: 0 16px 16px 0;
   border-radius: 16px;
 }
+
+       p+ img {
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.233) 0px 20px 50px 0px;
+    border-radius: 6px;
+    // margin: auto;
+    width: 90%;
+    height: 90%;
+  }
+img +br+ em {
+    border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 0.8rem;
+    box-align: center;}
+    

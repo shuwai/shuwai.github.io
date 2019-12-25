@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>科研 | Shuwai&#39;s blog</title>
+<title>在 VS code 搭建 Python 环境 | Shuwai&#39;s blog</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -78,53 +78,75 @@
 
 
       <div class="content-container">
-
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> 科研
-          </h2> 
-        </div>
-
-        
-<section class="post-item">
-    <div class="content">
-      <a href="https://shuwai.github.io/post/free-origin-for-edu">
-        <h2 class="post-title">免费获取专业绘图软件 OriginPro </h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-12-11</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://shuwai.github.io/post-images/setup-python-environment-in-vscode.png')">
+            </div>
+          
+          <h2 class="post-title">在 VS code 搭建 Python 环境</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-12-25</span>
             
-              <a href="https://shuwai.github.io/tag/HVuSjOoGu">
-                科研
+              <span>
+                <i class="icon-pricetags-outline"></i>
                 
-              </a>
+                  <a href="https://shuwai.github.io/tag/python">
+                    Python
+                    
+                  </a>
+                
+              </span>
             
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://shuwai.github.io/post/free-origin-for-edu">
-        <div class="feature-container" style="background-image: url('https://shuwai.github.io/post-images/free-origin-for-edu.png')">
+          </div>
+          <div class="post-content">
+            <h1 id="安装-python3">安装 Python3</h1>
+<ol>
+<li>去 <a href="https://www.python.org/downloads/">官网</a> 下载 Python 3.7.（尽管 Python 3.8 已发布，但部分库没有完成适配，故并不推荐安装）</li>
+<li>安装时记得将<code>Add to path</code>勾选上</li>
+<li><code>Win+R</code>输入<code>cmd</code>进入命令行<br>
+输入<code>py -3 --version</code>, 若看到<code>Python 3.7.4</code>等字样表示安装成功</li>
+</ol>
+<h1 id="安装常用库">安装常用库</h1>
+<p>命令行中依次运行</p>
+<pre><code>pip install scipy
+pip install matplotlib
+</code></pre>
+<h1 id="安装-vs-code-相关插件">安装 VS Code 相关插件</h1>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner">Code Runner</a></li>
+</ul>
+<h1 id="配置等宽字体">配置等宽字体</h1>
+<ol>
+<li>去 <a href="https://github.com/be5invis/Sarasa-Gothic/releases">Github</a> 下载<strong>更纱黑体</strong></li>
+<li>安装适合代码使用的等距字体<code>sarasa-mono-sc-regular.ttf</code></li>
+<li>在 VS Code 中设置字体:
+<ol>
+<li><code>Ctrl+Shift+P</code>, 输入<code>Open Settings (JSON)</code>打开用户配置文件</li>
+<li>加入如下代码：</li>
+</ol>
+<pre><code>&quot;terminal.integrated.fontFamily&quot;: &quot;等距更纱黑体 SC&quot;,
+&quot;editor.fontFamily&quot;: &quot;等距更纱黑体 SC&quot;,
+&quot;editor.mouseWheelZoom&quot;: true,
+</code></pre>
+</li>
+</ol>
+
+          </div>
         </div>
-      </a>
-    
-  </section>
 
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://shuwai.github.io/post/tour-in-pekingUniversity">
+              <h3 class="post-title">
+                下一篇：北京大学一游
+              </h3>
+            </a>
+          </div>
+          
       </div>
+
+      
 
       <div class="site-footer">
   <div class="slogan"></div>
