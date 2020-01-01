@@ -2,13 +2,60 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shuwai.github.io</id>
     <title>Shuwai&apos;s blog</title>
-    <updated>2019-12-25T07:45:02.846Z</updated>
+    <updated>2020-01-01T04:26:43.161Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shuwai.github.io"/>
     <link rel="self" href="https://shuwai.github.io/atom.xml"/>
     <logo>https://shuwai.github.io/images/avatar.png</logo>
     <icon>https://shuwai.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Shuwai&apos;s blog</rights>
+    <rights>All rights reserved 2020, Shuwai&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[使用 Python 给一座山绘制 Ridgeplot]]></title>
+        <id>https://shuwai.github.io/post/ridge-map-with-python</id>
+        <link href="https://shuwai.github.io/post/ridge-map-with-python">
+        </link>
+        <updated>2019-12-29T13:06:08.000Z</updated>
+        <content type="html"><![CDATA[<p>Ridgeplot, 曾经也被称作joyplot(因其背后有一个悲惨的故事, 目前多称其为 ridgeplot), 数据可视化中常用来表现峰值的位移.</p>
+<p><a href="https://github.com/ColCarroll/ridge_map">ridge_map</a>是一个用来为各种山峰绘制ridgeplot的第三方包, 基于matplotlib, 通过简单的几步操作, 你可以用轻易地用它来为你喜欢的山峰绘制一幅有趣的ridgeplot.</p>
+<h3 id="安装ridge_map">安装ridge_map</h3>
+<pre><code>pip install ridge_map
+</code></pre>
+<h3 id="寻找坐标">寻找坐标</h3>
+<ol>
+<li>在这个<a href="http://bboxfinder.com/">网站</a>, 找到你喜欢的山峰的位置, 用左边工具栏画一个矩形, 圈出山峰的区域.</li>
+<li>如果画错了, 用删除工具删除重画即可. 这个网站的UI似乎有问题, 工具和icon并不对应.</li>
+<li>复制下方的坐标备用.<br>
+在这里, 我以丹霞山为例:<br>
+<img src="./assets/2019-12-29-21-40-46.png" alt="" loading="lazy"></li>
+</ol>
+<h3 id="绘制">绘制</h3>
+<p>新建以下Python文件, 将代码如下:</p>
+<pre><code class="language-python">from matplotlib.font_manager import FontProperties
+import matplotlib.pyplot as plt
+from ridge_map import RidgeMap
+fig=plt.figure(figsize=(10,5))
+axes=plt.subplot()
+# 输入字体名称或直接指定字体的路径
+font = FontProperties(family=&quot;Poor Richard&quot;)
+# font = FontProperties(fname=r&quot;C:\\WINDOWS\\Fonts\\LCALLIG.TTF&quot;, size=14)
+rm = RidgeMap((113.600464,24.874623,113.797177,25.064064),font=font)
+values = rm.get_elevation_data(num_lines=240)
+rm.plot_map(values=rm.preprocess(values=values, lake_flatness=0, water_ntile=0, vertical_ratio=440),
+            label=&quot;Mount\nDanxia&quot;,
+            label_y=0.05,
+            label_x=0.8,
+            label_size=20,
+            linewidth=1,
+            line_color=plt.get_cmap('Greens'),
+            kind='elevation',
+            ax=axes,
+            background_color='white')
+plt.show()
+</code></pre>
+<h3 id="效果">效果</h3>
+<figure data-type="image" tabindex="1"><img src="./assets/2019-12-29-21-51-46.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在微软输入法中加入小鹤双拼]]></title>
         <id>https://shuwai.github.io/post/xiaoheshuangpin-in-microsoft-pinyin</id>
@@ -81,7 +128,11 @@ pip install matplotlib
         <link href="https://shuwai.github.io/post/tour-in-pekingUniversity">
         </link>
         <updated>2019-12-20T14:17:51.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://shuwai.github.io/post-images/assets/%E5%8D%9A%E9%9B%85%E5%A1%94.jpeg" alt="" loading="lazy"><br>
+        <summary type="html"><![CDATA[<p>🏫</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>🏫</p>
+<!-- more -->
+<p><img src="https://shuwai.github.io/post-images/assets/%E5%8D%9A%E9%9B%85%E5%A1%94.jpeg" alt="" loading="lazy"><br>
 <em>博雅塔</em></p>
 <p><img src="https://shuwai.github.io/post-images/assets/%E6%B0%91%E4%B8%BB%E6%A5%BC.jpeg" alt="" loading="lazy"><br>
 <em>民主楼</em></p>
@@ -107,7 +158,11 @@ pip install matplotlib
         <link href="https://shuwai.github.io/post/free-origin-for-edu">
         </link>
         <updated>2019-12-11T12:09:47.000Z</updated>
-        <content type="html"><![CDATA[<p>开门见山，任意搜索引擎搜索&quot;Origin 中文论坛&quot;或 <a href="https://my.originlab.com/forum/forum.asp?FORUM_ID=28">链接直达</a></p>
+        <summary type="html"><![CDATA[<p>📊</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>📊</p>
+<!-- more -->
+<p>开门见山，任意搜索引擎搜索&quot;Origin 中文论坛&quot;或 <a href="https://my.originlab.com/forum/forum.asp?FORUM_ID=28">链接直达</a></p>
 <blockquote>
 <p>OriginLab 为中国学生提供了免费半年正版中文 OriginPro，只要你是在校大学生，只要你有以 edu.cn/ac.cn 结尾的学校邮箱，你就能拥有它。</p>
 </blockquote>
@@ -133,7 +188,11 @@ pip install matplotlib
         <link href="https://shuwai.github.io/post/first-blog">
         </link>
         <updated>2019-12-11T02:49:55.000Z</updated>
-        <content type="html"><![CDATA[<p>很早以前就有建一个属于自己的博客的想法了，苦于拖延症，即使是在 <a href="https://wordpress.org/">WordPress</a>, <a href="https://hexo.io/zh-cn/docs/">Hexo</a> 等工具已相当成熟的 9102 年，也迟迟没有动手。现在，9102 年的最后一个月，小小树的博客终于开张了啦。</p>
+        <summary type="html"><![CDATA[<p>📜</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>📜</p>
+<!-- more -->
+<p>很早以前就有建一个属于自己的博客的想法了，苦于拖延症，即使是在 <a href="https://wordpress.org/">WordPress</a>, <a href="https://hexo.io/zh-cn/docs/">Hexo</a> 等工具已相当成熟的 9102 年，也迟迟没有动手。现在，9102 年的最后一个月，小小树的博客终于开张了啦。</p>
 <p>这个博客借助 <a href="https://gridea.dev/">Gridea</a> 和 <a href="https://pages.github.com/">Github Pages</a> 搭建，如果你也有搭建个人博客的想法，但像我一样没有相关经验，Gridea 是一个不错的选择。你可以参考这个 <a href="https://gridea.dev/docs/">教程</a>, 仅需半小时，无需编程基础就能拥有自己的一片写作空间。</p>
 <p>最后，希望能坚持下来，认真写作，做到两天一更。😜</p>
 ]]></content>

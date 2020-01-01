@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>在微软输入法中加入小鹤双拼 | Shuwai&#39;s blog</title>
+<title>使用 Python 给一座山绘制 Ridgeplot | Shuwai&#39;s blog</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,18 +80,18 @@
       <div class="content-container">
         <div class="post-detail">
           
-            <div class="feature-container" style="background-image: url('https://shuwai.github.io/post-images/xiaoheshuangpin-in-microsoft-pinyin.png')">
+            <div class="feature-container" style="background-image: url('https://shuwai.github.io/post-images/')">
             </div>
           
-          <h2 class="post-title">在微软输入法中加入小鹤双拼</h2>
+          <h2 class="post-title">使用 Python 给一座山绘制 Ridgeplot</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-12-25</span>
+            <span><i class="icon-calendar-outline"></i> 2019-12-29</span>
             
               <span>
                 <i class="icon-pricetags-outline"></i>
                 
-                  <a href="https://shuwai.github.io/tag/trick">
-                    trick
+                  <a href="https://shuwai.github.io/tag/python">
+                    Python
                     
                   </a>
                 
@@ -99,22 +99,54 @@
             
           </div>
           <div class="post-content">
-            <ol>
-<li>cmd输入<code>regedit</code>打开注册表.</li>
-<li>定位到<code>计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS</code></li>
-<li>新建字符串值, 数值名称为<code>UserDefinedDoublePinyinScheme0</code> ，数值数据为<pre><code>小鹤双拼*2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt
+            <p>Ridgeplot, 曾经也被称作joyplot(因其背后有一个悲惨的故事, 目前多称其为 ridgeplot), 数据可视化中常用来表现峰值的位移.</p>
+<p><a href="https://github.com/ColCarroll/ridge_map">ridge_map</a>是一个用来为各种山峰绘制ridgeplot的第三方包, 基于matplotlib, 通过简单的几步操作, 你可以用轻易地用它来为你喜欢的山峰绘制一幅有趣的ridgeplot.</p>
+<h3 id="安装ridge_map">安装ridge_map</h3>
+<pre><code>pip install ridge_map
 </code></pre>
-</li>
+<h3 id="寻找坐标">寻找坐标</h3>
+<ol>
+<li>在这个<a href="http://bboxfinder.com/">网站</a>, 找到你喜欢的山峰的位置, 用左边工具栏画一个矩形, 圈出山峰的区域.</li>
+<li>如果画错了, 用删除工具删除重画即可. 这个网站的UI似乎有问题, 工具和icon并不对应.</li>
+<li>复制下方的坐标备用.<br>
+在这里, 我以丹霞山为例:<br>
+<img src="./assets/2019-12-29-21-40-46.png" alt="" loading="lazy"></li>
 </ol>
+<h3 id="绘制">绘制</h3>
+<p>新建以下Python文件, 将代码如下:</p>
+<pre><code class="language-python">from matplotlib.font_manager import FontProperties
+import matplotlib.pyplot as plt
+from ridge_map import RidgeMap
+fig=plt.figure(figsize=(10,5))
+axes=plt.subplot()
+# 输入字体名称或直接指定字体的路径
+font = FontProperties(family=&quot;Poor Richard&quot;)
+# font = FontProperties(fname=r&quot;C:\\WINDOWS\\Fonts\\LCALLIG.TTF&quot;, size=14)
+rm = RidgeMap((113.600464,24.874623,113.797177,25.064064),font=font)
+values = rm.get_elevation_data(num_lines=240)
+rm.plot_map(values=rm.preprocess(values=values, lake_flatness=0, water_ntile=0, vertical_ratio=440),
+            label=&quot;Mount\nDanxia&quot;,
+            label_y=0.05,
+            label_x=0.8,
+            label_size=20,
+            linewidth=1,
+            line_color=plt.get_cmap('Greens'),
+            kind='elevation',
+            ax=axes,
+            background_color='white')
+plt.show()
+</code></pre>
+<h3 id="效果">效果</h3>
+<figure data-type="image" tabindex="1"><img src="./assets/2019-12-29-21-51-46.png" alt="" loading="lazy"></figure>
 
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://shuwai.github.io/post/blog-collection">
+            <a class="purple-link" href="https://shuwai.github.io/post/xiaoheshuangpin-in-microsoft-pinyin">
               <h3 class="post-title">
-                下一篇：一些不错的博客 | updating
+                下一篇：在微软输入法中加入小鹤双拼
               </h3>
             </a>
           </div>
